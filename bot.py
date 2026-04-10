@@ -4,7 +4,7 @@ import os
 import time
 
 # --- HFT CONFIGURATION ---
-SYMBOL = 'BTC/USDT'
+SYMBOL = 'SOL/USDT'
 ORDER_SIZE = 0.0005        # Small balance entry (~$35-40)
 MAX_INVENTORY = 0.002      # Max BTC to hold (Risk Management)
 TICK_SIZE = 0.01           # Smallest price move for BTC/USDT
@@ -79,7 +79,7 @@ class InstitutionalMaker:
         
         # 15% Fill Probability (Typical for competitive HFT Maker orders)
         import random
-        if random.random() > 0.15:
+        if random.random() > 0.50:
             return
 
         # Execute Trade
